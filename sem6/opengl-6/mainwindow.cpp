@@ -11,16 +11,7 @@ MainWindow::~MainWindow() {
 
 void MainWindow::on_up_clicked()
 {
-    ui->openGLWidget->scaleX = 1;
-    ui->openGLWidget->scaleY = 1;
-    ui->openGLWidget->scaleZ = 1;
-    ui->openGLWidget->translateX = 0.0;
-    ui->openGLWidget->translateY = 0.0;
-    ui->openGLWidget->translateZ = 0.0;
-    ui->openGLWidget->angleX = 10;
-    ui->openGLWidget->rotatedX = 1;
-    ui->openGLWidget->rotatedY = 0;
-    ui->openGLWidget->rotatedZ = 0;
+    ui->openGLWidget->angleX += 10;
     if(ui->openGLWidget->angleX==360){
         ui->openGLWidget->angleX = 0;
     }
@@ -29,16 +20,7 @@ void MainWindow::on_up_clicked()
 
 void MainWindow::on_right_clicked()
 {
-    ui->openGLWidget->scaleX = 1;
-    ui->openGLWidget->scaleY = 1;
-    ui->openGLWidget->scaleZ = 1;
-    ui->openGLWidget->translateX = 0.0;
-    ui->openGLWidget->translateY = 0.0;
-    ui->openGLWidget->translateZ = 0.0;
-    ui->openGLWidget->angleX = 10;
-    ui->openGLWidget->rotatedX = 0;
-    ui->openGLWidget->rotatedY = 1;
-    ui->openGLWidget->rotatedZ = 0;
+    ui->openGLWidget->angleY += 10;
     if(ui->openGLWidget->angleY==360){
         ui->openGLWidget->angleY = 0;
     }
@@ -47,16 +29,7 @@ void MainWindow::on_right_clicked()
 
 void MainWindow::on_left_clicked()
 {
-    ui->openGLWidget->scaleX = 1;
-    ui->openGLWidget->scaleY = 1;
-    ui->openGLWidget->scaleZ = 1;
-    ui->openGLWidget->translateX = 0.0;
-    ui->openGLWidget->translateY = 0.0;
-    ui->openGLWidget->translateZ = 0.0;
-    ui->openGLWidget->angleX = -10;
-    ui->openGLWidget->rotatedX = 0;
-    ui->openGLWidget->rotatedY = 1;
-    ui->openGLWidget->rotatedZ = 0;
+    ui->openGLWidget->angleY -= 10;
     if(ui->openGLWidget->angleY==360){
         ui->openGLWidget->angleY = 0;
     }
@@ -65,16 +38,7 @@ void MainWindow::on_left_clicked()
 
 void MainWindow::on_leftZ_clicked()
 {
-    ui->openGLWidget->scaleX = 1;
-    ui->openGLWidget->scaleY = 1;
-    ui->openGLWidget->scaleZ = 1;
-    ui->openGLWidget->translateX = 0.0;
-    ui->openGLWidget->translateY = 0.0;
-    ui->openGLWidget->translateZ = 0.0;
-    ui->openGLWidget->angleX = -10;
-    ui->openGLWidget->rotatedX = 0;
-    ui->openGLWidget->rotatedY = 0;
-    ui->openGLWidget->rotatedZ = 1;
+    ui->openGLWidget->angleZ -= 10;
     if(ui->openGLWidget->angleZ==360){
         ui->openGLWidget->angleZ = 0;
     }
@@ -83,16 +47,7 @@ void MainWindow::on_leftZ_clicked()
 
 void MainWindow::on_rightZ_clicked()
 {
-    ui->openGLWidget->scaleX = 1;
-    ui->openGLWidget->scaleY = 1;
-    ui->openGLWidget->scaleZ = 1;
-    ui->openGLWidget->translateX = 0.0;
-    ui->openGLWidget->translateY = 0.0;
-    ui->openGLWidget->translateZ = 0.0;
-    ui->openGLWidget->angleX = 10;
-    ui->openGLWidget->rotatedX = 0;
-    ui->openGLWidget->rotatedY = 0;
-    ui->openGLWidget->rotatedZ = 1;
+    ui->openGLWidget->angleZ += 10;
     if(ui->openGLWidget->angleZ==360){
         ui->openGLWidget->angleZ = 0;
     }
@@ -101,16 +56,7 @@ void MainWindow::on_rightZ_clicked()
 
 void MainWindow::on_down_clicked()
 {
-    ui->openGLWidget->scaleX = 1;
-    ui->openGLWidget->scaleY = 1;
-    ui->openGLWidget->scaleZ = 1;
-    ui->openGLWidget->translateX = 0.0;
-    ui->openGLWidget->translateY = 0.0;
-    ui->openGLWidget->translateZ = 0.0;
-    ui->openGLWidget->angleX = -10;
-    ui->openGLWidget->rotatedX = 1;
-    ui->openGLWidget->rotatedY = 0;
-    ui->openGLWidget->rotatedZ = 0;
+    ui->openGLWidget->angleX -= 10;
     if(ui->openGLWidget->angleX==360){
         ui->openGLWidget->angleX = 0;
     }
@@ -118,197 +64,156 @@ void MainWindow::on_down_clicked()
 }
 
 
-void MainWindow::on_scaleX_clicked()
+void MainWindow::on_scaleXup_clicked()
 {
-    ui->openGLWidget->scaleX = 1.2;
-    ui->openGLWidget->scaleY = 1;
-    ui->openGLWidget->scaleZ = 1;
-    ui->openGLWidget->translateX = 0.0;
-    ui->openGLWidget->translateY = 0.0;
-    ui->openGLWidget->translateZ = 0.0;
-    ui->openGLWidget->angleX = 0;
-    ui->openGLWidget->rotatedX = 0;
-    ui->openGLWidget->rotatedY = 0;
-    ui->openGLWidget->rotatedZ = 0;
+    ui->openGLWidget->scaleX += 0.1;
     ui->openGLWidget->update();
 }
 
-void MainWindow::on_scale_X_clicked()
+void MainWindow::on_scaleXdown_clicked()
 {
-    ui->openGLWidget->scaleX = 0.8;
-    ui->openGLWidget->scaleY = 1;
-    ui->openGLWidget->scaleZ = 1;
-    ui->openGLWidget->translateX = 0.0;
-    ui->openGLWidget->translateY = 0.0;
-    ui->openGLWidget->translateZ = 0.0;
-    ui->openGLWidget->angleX = 0;
-    ui->openGLWidget->rotatedX = 0;
-    ui->openGLWidget->rotatedY = 0;
-    ui->openGLWidget->rotatedZ = 0;
+    if(ui->openGLWidget->scaleX>=0.1){
+        ui->openGLWidget->scaleX -= 0.1;
+    }
     ui->openGLWidget->update();
 }
 
-void MainWindow::on_scaleY_clicked()
+void MainWindow::on_scaleYup_clicked()
 {
-    ui->openGLWidget->scaleX = 1;
-    ui->openGLWidget->scaleY = 1.2;
-    ui->openGLWidget->scaleZ = 1;
-    ui->openGLWidget->translateX = 0.0;
-    ui->openGLWidget->translateY = 0.0;
-    ui->openGLWidget->translateZ = 0.0;
-    ui->openGLWidget->angleX = 0;
-    ui->openGLWidget->rotatedX = 0;
-    ui->openGLWidget->rotatedY = 0;
-    ui->openGLWidget->rotatedZ = 0;
+    ui->openGLWidget->scaleY += 0.1;
     ui->openGLWidget->update();
 }
 
-void MainWindow::on_scale_Y_clicked()
+void MainWindow::on_scaleYdown_clicked()
 {
-    ui->openGLWidget->scaleX = 1;
-    ui->openGLWidget->scaleY = 0.8;
-    ui->openGLWidget->scaleZ = 1;
-    ui->openGLWidget->translateX = 0.0;
-    ui->openGLWidget->translateY = 0.0;
-    ui->openGLWidget->translateZ = 0.0;
-    ui->openGLWidget->angleX = 0;
-    ui->openGLWidget->rotatedX = 0;
-    ui->openGLWidget->rotatedY = 0;
-    ui->openGLWidget->rotatedZ = 0;
+    if(ui->openGLWidget->scaleY>=0.1){
+        ui->openGLWidget->scaleY -= 0.1;
+    }
     ui->openGLWidget->update();
 }
 
-void MainWindow::on_scaleZ_clicked()
+void MainWindow::on_scaleZup_clicked()
 {
-    ui->openGLWidget->scaleX = 1;
-    ui->openGLWidget->scaleY = 1;
-    ui->openGLWidget->scaleZ = 1.2;
-    ui->openGLWidget->translateX = 0.0;
-    ui->openGLWidget->translateY = 0.0;
-    ui->openGLWidget->translateZ = 0.0;
-    ui->openGLWidget->angleX = 0;
-    ui->openGLWidget->rotatedX = 0;
-    ui->openGLWidget->rotatedY = 0;
-    ui->openGLWidget->rotatedZ = 0;
+    ui->openGLWidget->scaleZ += 0.1;
     ui->openGLWidget->update();
 }
 
-void MainWindow::on_scale_Z_clicked()
+void MainWindow::on_scaleZdown_clicked()
 {
-    ui->openGLWidget->scaleX = 1;
-    ui->openGLWidget->scaleY = 1;
-    ui->openGLWidget->scaleZ = 0.8;
-    ui->openGLWidget->translateX = 0.0;
-    ui->openGLWidget->translateY = 0.0;
-    ui->openGLWidget->translateZ = 0.0;
-    ui->openGLWidget->angleX = 0;
-    ui->openGLWidget->rotatedX = 0;
-    ui->openGLWidget->rotatedY = 0;
-    ui->openGLWidget->rotatedZ = 0;
+    if(ui->openGLWidget->scaleZ>=0.1){
+        ui->openGLWidget->scaleZ -= 0.1;
+    }
     ui->openGLWidget->update();
 }
 
 void MainWindow::on_translateUp_clicked()
 {
-    ui->openGLWidget->scaleX = 1;
-    ui->openGLWidget->scaleY = 1;
-    ui->openGLWidget->scaleZ = 1;
-    ui->openGLWidget->translateX = 0;
-    ui->openGLWidget->translateY = -0.5;
-    ui->openGLWidget->translateZ = 0.0;
-    ui->openGLWidget->angleX = 0;
-    ui->openGLWidget->rotatedX = 0;
-    ui->openGLWidget->rotatedY = 0;
-    ui->openGLWidget->rotatedZ = 0;
+    ui->openGLWidget->translateY += 0.1;
     ui->openGLWidget->update();
 }
 
 void MainWindow::on_translateLeft_clicked()
 {
-    ui->openGLWidget->scaleX = 1;
-    ui->openGLWidget->scaleY = 1;
-    ui->openGLWidget->scaleZ = 1;
-    ui->openGLWidget->translateX = -0.5;
-    ui->openGLWidget->translateY = 0;
-    ui->openGLWidget->translateZ = 0.0;
-    ui->openGLWidget->angleX = 0;
-    ui->openGLWidget->rotatedX = 0;
-    ui->openGLWidget->rotatedY = 0;
-    ui->openGLWidget->rotatedZ = 0;
+    ui->openGLWidget->translateX -= 0.1;
     ui->openGLWidget->update();
 }
 
 void MainWindow::on_translateRight_clicked()
 {
-    ui->openGLWidget->scaleX = 1;
-    ui->openGLWidget->scaleY = 1;
-    ui->openGLWidget->scaleZ = 1;
-    ui->openGLWidget->translateX = 0.5;
-    ui->openGLWidget->translateY = 0;
-    ui->openGLWidget->translateZ = 0.0;
-    ui->openGLWidget->angleX = 0;
-    ui->openGLWidget->rotatedX = 0;
-    ui->openGLWidget->rotatedY = 0;
-    ui->openGLWidget->rotatedZ = 0;
+    ui->openGLWidget->translateX += 0.1;
     ui->openGLWidget->update();
 }
 
 void MainWindow::on_translateDown_clicked()
 {
-    ui->openGLWidget->scaleX = 1;
-    ui->openGLWidget->scaleY = 1;
-    ui->openGLWidget->scaleZ = 1;
-    ui->openGLWidget->translateX = 0;
-    ui->openGLWidget->translateY = 0.5;
-    ui->openGLWidget->translateZ = 0.0;
-    ui->openGLWidget->angleX = 0;
-    ui->openGLWidget->rotatedX = 0;
-    ui->openGLWidget->rotatedY = 0;
-    ui->openGLWidget->rotatedZ = 0;
+    ui->openGLWidget->translateY -= 0.1;
     ui->openGLWidget->update();
 }
 
-void MainWindow::on_translateUp_2_clicked()
-{
-    ui->openGLWidget->scaleX = 1;
-    ui->openGLWidget->scaleY = 1;
-    ui->openGLWidget->scaleZ = 1;
-    ui->openGLWidget->translateX = 0;
-    ui->openGLWidget->translateY = -0.5;
-    ui->openGLWidget->translateZ = 0.0;
-    ui->openGLWidget->angleX = 0;
-    ui->openGLWidget->rotatedX = 0;
-    ui->openGLWidget->rotatedY = 0;
-    ui->openGLWidget->rotatedZ = 0;
-    ui->openGLWidget->update();
-}
-
-void MainWindow::on_checkBox_stateChanged(int arg1)
+void MainWindow::on_ortho_stateChanged(int arg1)
 {
     ui->openGLWidget->ortog = arg1;
     ui->openGLWidget->update();
 }
 
-void MainWindow::on_checkBox_2_stateChanged(int arg1)
+void MainWindow::on_perspective_stateChanged(int arg1)
 {
     ui->openGLWidget->persp = arg1;
     ui->openGLWidget->update();
 }
 
-void MainWindow::on_checkBox_3_stateChanged(int arg1)
+void MainWindow::on_shape_visibility_stateChanged(int arg1)
 {
-    ui->openGLWidget->visible = arg1;
+    ui->openGLWidget->shape_visible = arg1;
     ui->openGLWidget->update();
 }
 
-void MainWindow::on_fineness_actionTriggered(int action)
+void MainWindow::on_edge_visibility_stateChanged(int arg1)
 {
-    ui->openGLWidget->fineness = action;
+    ui->openGLWidget->edge_visible = arg1;
     ui->openGLWidget->update();
 }
 
-void MainWindow::on_intensity_actionTriggered(int action)
+void MainWindow::on_trans_visibility_stateChanged(int arg1)
 {
-    ui->openGLWidget->intensity = action;
+    ui->openGLWidget->trans_visible = arg1;
     ui->openGLWidget->update();
+}
+
+void MainWindow::on_coords_visibility_stateChanged(int arg1)
+{
+    ui->openGLWidget->coords_visible = arg1;
+    ui->openGLWidget->update();
+}
+
+void MainWindow::on_fineness_valueChanged(int value)
+{
+    ui->openGLWidget->fineness = value;
+    ui->openGLWidget->update();
+}
+
+void MainWindow::on_intensity_valueChanged(int value)
+{
+    ui->openGLWidget->intensity = value;
+    ui->openGLWidget->update();
+}
+
+void MainWindow::on_ortho_btn_clicked(bool checked)
+{
+
+}
+
+void MainWindow::on_perspective_btn_clicked(bool checked)
+{
+
+}
+
+void MainWindow::on_up_eye_clicked()
+{
+
+}
+
+void MainWindow::on_left_eye_clicked()
+{
+
+}
+
+void MainWindow::on_rightZ_eye_clicked()
+{
+
+}
+
+void MainWindow::on_leftZ_eye_clicked()
+{
+
+}
+
+void MainWindow::on_right_eye_clicked()
+{
+
+}
+
+void MainWindow::on_down_eye_clicked()
+{
+
 }
